@@ -16,7 +16,7 @@ def URL_generator():
             "Y","Z"]
 
     randomURL = random.choices(chars, k=6)
-
+	
     randomURL = "".join(randomURL)
-
+    print("it worked!")
     return(f"{prefix}" + randomURL)
