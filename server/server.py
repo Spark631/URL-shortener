@@ -11,7 +11,13 @@ def home():
 def data():
     text = request.form['url']
     print(text)
-    return render_template("after.html", text=text)
+    
+    return render_template("link.html", text=text)
+
+@app.route("/<test>")
+def printer(test):
+    
+    return render_template("link.html", text=test)
 
 if __name__ == '__main__':
     app.run(debug=True)
