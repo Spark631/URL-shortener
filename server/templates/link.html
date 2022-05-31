@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret One">
+    <title>Url Shortener</title>
+    <link href="static/styleTwo.css" rel="stylesheet" type="text/css"/>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
 </head>
+
 <body>
-    <h1>{{shorty}}</h1>
+    <div class="maintop">
+        <h1>
+            URL SHORTENER
+        </h1>
+    </div>
+
+    <div class="instruct">
+        <h1>
+          Your Short URL
+        </h1>
+    </div>
+
+  <br>
+
+    <div class="maincontain">
+
+        <div class="midfill" id="link">
+            <h1 id="link1">http://127.0.0.1:5000/{{shorty}}</h1>
+        </div>
+        
+        <div class="copy">
+            <button class="copybtn" onclick="copy()">Copy</button>
+        </div>
+    </div>
+
 </body>
 </html>

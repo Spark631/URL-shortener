@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poiret One;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(#135874, skyblue);
+}
+
+.maintop {
+    text-align: center;
+    color: white;
+    font-size: calc(1em + 2vw);
+    margin-bottom: 5vh;
+}
+.midfill {
+    margin: auto;
+    border-radius: 25px;
+    width: 50vw;
+    height: 20vh;
+    background: white;opacity: 50%;
+    opacity: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    white-space: normal;
+}
+
+.instruct{
+    text-align: center;
+    color: white;
+}
+
+.inputs {
+    width: 50vw;
+    margin: auto;
+}
+.inputBox {
+    text-align: center;
+    border-radius: 25px;
+    width: 50vw;
+    height: 10vh;
+    font-size: calc(3em - 1vw);
+    color: rgb(255, 255, 255);
+}
+.copy {
+    
+    margin-top: 5vh;
+    text-align: center;
+}
+.copybtn {
+    width: 20vw;
+    border-radius: 50px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: calc(1em + 0.5vw);
+}
+.copybtn:hover {
+    background: rgb(110, 221, 160);
+    color: black;
+}
