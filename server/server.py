@@ -18,12 +18,9 @@ def data():
     text = request.form['url'].strip()
     
     if validators.url(text) == True: 
-        if short.shorten(text, gen.URL_generator()) == False:
-            return "Error"
+        short.shorten(text, gen.URL_generator())
 
-
-
-    return render_template("link.html", text=text)
+    return render_template("link.html", shorty="hi")
 
 @app.route("/<user>")
 def printer(user):
