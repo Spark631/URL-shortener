@@ -17,7 +17,11 @@ def home():
 def data():
     text = request.form['url'].strip()
     
-    if validators.url(text): print(gen.URL_generator())
+    if validators.url(text) == True: 
+        if short.shorten(text, gen.URL_generator()) == False:
+            return "Error"
+
+
 
     return render_template("link.html", text=text)
 
