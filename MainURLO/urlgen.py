@@ -9,7 +9,7 @@ def URL_generator():
     """
 
     # prefix = "spark/"
-
+    # prefix = "127.0.0.1:5000/"
     chars = ["a","b","c","d","e","f","g","h","i","j",
             "k","l","m","n","o","p","q","r","s","t",
             "u","v","w","x","y","z","0","1","2","3",
@@ -46,23 +46,3 @@ def URL_generator():
             print("this iwh yu")
             return False
 
-
-    while True:
-        try:
-            database = sqlite3.connect("data.db")
-            cursor = database.cursor()
-
-            cursor.execute("CREATE TABLE IF NOT EXISTS data(id INTEGER PRIMARY KEY, url TEXT, shorturl TEXT)")
-            all_url = cursor.execute("SELECT shorturl FROM data").fetchall() # Gives a tuple of all shorturls
-            for SURL in all_url:
-                if short in SURL:
-                    short = URL_generator() # generate new short URL
-                else:
-                    cursor.execute("INSERT INTO data(url, shorturl) VALUES(?, ?)", (URL, short)) # Inserts the URL and the short URL into the database
-                    return short
-        except:
-            database.close()
-            return "Error"
-        finally:
-            database.commit()
-            database.close()

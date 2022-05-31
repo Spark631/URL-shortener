@@ -16,10 +16,11 @@ def home():
 def data():
     text = request.form['url'].strip()
     
-    if validators.url(text) == True: 
-        short.shorten(text, gen.URL_generator())
+    if validators.url(text) == True:
+        urlGEN = gen.URL_generator()
+        short.shorten(text, urlGEN)
 
-    return render_template("link.html", shorty="hi")
+    return render_template("link.html", shorty=urlGEN)
 
 @app.route("/<sURL>")
 def printer(sURL):
@@ -27,6 +28,6 @@ def printer(sURL):
         olink = link.retrive(sURL)
         return redirect(olink)
     except:
-        return False
+        return "poop"
 if __name__ == '__main__':
     app.run(debug=True)
