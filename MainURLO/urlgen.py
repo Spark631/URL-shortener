@@ -8,7 +8,7 @@ def URL_generator():
     Generates a random URL from a list of characters.
     """
 
-    prefix = "spark.at/"
+    # prefix = "spark/"
 
     chars = ["a","b","c","d","e","f","g","h","i","j",
             "k","l","m","n","o","p","q","r","s","t",
@@ -30,7 +30,8 @@ def URL_generator():
     while True:
         try:
             if all_url == []:
-                return prefix + randomURL
+                # return prefix + randomURL
+                return randomURL
             for url in all_url:
                 if randomURL in url:
                     randomURL = []
@@ -38,7 +39,8 @@ def URL_generator():
                     randomURL = "".join(randomURL)
                     print("This is the after of the randomURL" + str(randomURL))
                 else:
-                    return prefix + randomURL
+                    # return prefix + randomURL
+                    return randomURL
             # return(f"{prefix}" + randomURL)
         except:
             print("this iwh yu")
