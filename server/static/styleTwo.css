@@ -60,6 +60,7 @@ html, body {
     font-size: calc(1em + 0.5vw);
 }
 .copybtn:hover {
+    cursor: pointer;
     background: rgb(110, 221, 160);
     color: black;
 }
