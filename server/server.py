@@ -1,11 +1,12 @@
 from flask import Flask
-from flask import request, jsonify, render_template, redirect
-import validators
-import sys
-sys.path.append('.')
+from flask import request,  render_template, redirect
 from MainURLO import urlgen as gen
 from MainURLO import shortener as short
 from MainURLO import linkRequest as link
+import validators
+import sys
+sys.path.append('.')
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -28,6 +29,6 @@ def printer(sURL):
         olink = link.retrive(sURL)
         return redirect(olink)
     except:
-        return "poop"
+        return "Error"
 if __name__ == '__main__':
     app.run(debug=True)
