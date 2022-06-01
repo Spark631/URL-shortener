@@ -8,7 +8,7 @@ def retrive(surl):
         url = cursor.execute(f"SELECT url FROM data WHERE shorturl = '{surl}'").fetchall()[0][0]
         return url
     except:
-        return "pee"
+        return "Failed"
     finally:
         database.commit()
         database.close()
