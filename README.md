@@ -17,3 +17,5 @@ Shown above is an overview of how the URL shortener works.
 -The links are stored in a Sqlite3 database
 
 -In an event that the program generates a link that is already used, it will generate a new link.
+
+-It can also determine if a link is valid or not
