@@ -3,16 +3,14 @@
 
 Hiya!
 
-This is my python project utilizing the package Sqlite3.
+This is my python project utilizing the package Sqlite3. I had a lot of fun learning how databases functioned and would love to learn more about them!
 
 Shown above is an overview of how the URL shortener works.
 
 <h1>About the program</h1>
 
 
--This program generates a short link from a list of 62 characters.
-
--This will result in a possibility of 916132832 different links.
+-This program generates a short link from a list of 62 characters, resulting in a possibility of 916132832 unique links
 
 -The links are stored in a Sqlite3 database
 
