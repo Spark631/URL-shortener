@@ -3,7 +3,7 @@
 
 Hiya!
 
-This is my python project utilizing the package Sqlite3. I had a lot of fun learning how databases functioned and would love to learn more about them!
+This is my python project utilizing the package Sqlite3. I had a lot of fun learning how databases worked and would love to learn more about them!
 
 Shown above is an overview of how the URL shortener works.
 
